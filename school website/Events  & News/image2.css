@@ -1,0 +1,105 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	overflow-x: hidden;
+}
+.image{
+	margin-bottom: 30px;
+}
+.image p {
+	font-size: 80px;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+	color:orange;
+	position: relative;
+	top: -450px;
+	visibility: hidden;
+	
+
+}
+#sport1{
+	
+	width: 490px;
+	background-color: black;
+	border-radius: 10px 10px 0 0;
+	color: white;
+	padding: 5px;
+	font-size: 20px;
+	position: relative;
+	top: -80px;
+}
+.row{	width:80%;
+	display: flex;
+	justify-content:space-between;
+	position:relative;
+	left:170px; 
+}
+.photos img{
+	border-radius:10px;
+	box-shadow:3px 0 0 0 grey;
+}
+
+.photos:hover p{ 
+	
+		transition:1s;
+		opacity:1;
+}
+
+#san{   
+	
+	font-family:'Times new roman';
+	color:white;
+	font-size:15px;
+	border-radius:0 0 10px 10px;
+	background-color:grey;
+	padding:10px;
+	position:relative;
+	top:-85px;
+}
+.photos p{
+		transition:1s;
+		opacity:0;
+}
+#news,#achievements{
+	display:flex;
+	justify-content:center;
+	font-size:70px;
+	text-decoration:underline;
+	position:relative;
+	top:-80px;
+	letter-spacing:4px;
+}
+table{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border: 0 solid black;
+	font-family: 'Times New Roman', Times, serif;
+
+}
+td,th{
+	padding: 10px;
+	text-align: center;
+	font-size: 18px;
+	background-color: rgba(128, 128, 128, 0.151);
+}
+ tr td:nth-child(1){
+	font-weight: bold;
+}
+tr:nth-child(1) th:nth-child(2)
+{
+	letter-spacing: 5px;
+	font-size: 25px;
+}
+tr:nth-child(1) th:nth-child(1){
+	font-size: 25px;
+}
+th, tr td:nth-child(1)
+{
+	background-color: rgb(6,177,56,1);
+}
+.tabel b{
+	color: red;
+}

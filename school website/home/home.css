@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body
+{
+    width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.slides
+{
+    display: none;
+    width: 1650px;
+    height: 75vh;
+    margin-bottom: 50px;
+   
+
+}
+
+.photos{
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+    box-shadow: 3px 3px 3px rgb(190, 187, 187);
+      
+}
+.photos:hover{
+    width: 305px;
+    height: 305px;
+    transition: 1s;
+    transform:perspective(200px) rotateY(5deg);
+      
+}
+.vision,.mission {
+    padding: 20px;
+    margin: 20px;
+    height: 550px;
+   
+    
+    
+}
+.content-vision{
+    position: relative;
+    top:100px;
+   width: 650px;
+  float:left;
+  z-index: -1
+  
+}
+.image1{
+    position: relative;
+    left: 10px;
+    
+}
+.image2{
+    position:relative;
+    top:80px;
+    left:-100px;
+}
+.image3{
+    position:relative;
+    top:200px;
+    left:-250px;
+}
+
+.mission{
+    clear: both;
+    
+}
+.img-vision{
+    position: relative;
+    left: 80px;
+   
+}
+.content-mission{
+    position: relative;
+    right:400px;
+    top:100px;
+    width: 650px;
+   float:right;
+  
+   
+ }
+ .img-mission{
+    position: relative;
+    left: 20px;
+   
+    
+}
+
+.content-vision h1,.content-mission h1{
+    display: inline;
+    font-size: 40px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-shadow: 2px 0 0 rgb(151, 245, 245);
+    
+
+}
+.content-mission p,.content-vision p{
+    padding-top: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!--social icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../bottom.css">
+    <link rel="stylesheet" href="registration.css">
+
+    <script src="registration.js"></script>
+    <!--for alert message-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script> 
+
+    <style>
+        .header{
+            position: static;
+        }
+    </style>
+   
+    
+</head>
+<body>
+    <div class="container">
+         <!--logo and school name-->
+         <div class="header">
+            <div class="name">
+                <img src="../images/logo.png" alt="Error" id="logo">
+                <p id="name-college">SPMS College</p>
+                <button class="registration" onclick="window.location.href='../registration/registration.html'">Registration</button>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../home/home.html" >Home</a></li>
+                    <li><a href="../Events  & News/New&Events.html" >Events & News</a></li>
+                    <li><a href="../sports/sports.html" >Sports</a></li>
+                    <li><a href="registration.html#contact" >Contact us</a></li>
+                    <li><a href="../About us/about us.html" >About us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="reg-image">
+
+        </div>
+        <div class="reg-form">
+            <h1> Student Registration Form</h1>
+            <form method="post" onsubmit="return false">
+                <!--student's details-->
+         <fieldset>
+                    <legend>Student Details</legend>
+
+                    <label for="fullname">Fullname :- </label> 
+                    <input type="text" id="fullname" class="capital" onblur="chngcap()" maxlength="50" required placeholder="Alex Fernando De Silva">
+                   
+                    <label for="initial"> Name with initial :- </label>
+                    <input type="text"  id="initial" class="capital" onblur="chngcap()" maxlength="20" required placeholder="Alex F.D.S">
+
+                    <label for="dob">Date of Birth :- </label> 
+                    <input type="date"  id="dob" required min="1995-01-01">
+
+                   
+                    <label for="gender">Gender :- </label> 
+                    <div class="gender">
+                    <input type="radio"  name="gender" id="male" class="none" value="male" checked ><label class="g" for="male">Male</label>
+                    <input type="radio"  name="gender" id="female" class="none" value="female"><label class="g" for="female">Female</label> 
+                    </div>
+                    <br>
+                    <label for="grade">Grade :- </label>
+                    <select  id="grade" onchange="display()" required>
+                        <option value="">Select your grade</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
+                   
+                    <label for="s.email">Email :- </label>
+                    <input type="email"  id="s.email" class="nocapital" placeholder="JSON@gmail.com">
+                    <p>You may select given sports if you wish :- </p>
+                    <br>
+                    <label for="cricket" class="place">Cricket</label>
+                    <input type="checkbox" name="sports[]" class="none" id="cricket">
+                    <label for="volleyball" class="place">Volleyball</label>
+                    <input type="checkbox" name="sports[]" class="none" id="volleybal">
+                    <label for="football" class="place">Football</label>
+                    <input type="checkbox" name="sports[]" class="none" id="football">
+                    <label for="badminton" class="place">Badminton</label>
+                    <input type="checkbox" name="sports[]" class="none" id="badminton">
+                    <label for="athletics" class="place">Athletics</label>
+                    <input type="checkbox" name="sports[]" class="none" id="athletics">
+                   
+                </fieldset>
+                <!--parent's details-->
+                <fieldset>
+                    <legend>Parent's Details</legend>
+                    <!--father's details-->
+                    <h3>Father</h3><br>
+                    <label for="fname"> Father's Full Name:- </label>
+                    <input type="text"  id="fname" class="capital" onblur="chngcap()" maxlength="50" placeholder="Full Name" required>
+
+                    <label for="foccupation">Father's Occupation :- </label>
+                    <input type="text"  id="foccupation" class="capital" onblur="chngcap()" maxlength="20" placeholder="Occupation" required>
+                
+                    <label for="fnic"> Father's NIC no :- </label> 
+                    <input type="text" id="fnic"  pattern="[0-9]{9}v"  placeholder="123456789v" required >
+                
+                    <label for="fphonenumber">Father's Phone numbre :- </label>
+                    <input type="tel"  id="fphonenumber" placeholder="+94-771234568" required pattern="\+94-[0-9]{9}">
+                
+                    <label for="femail">Father's E-mail :- </label>
+                    <input type="email"  id="femail" class="nocapital"  placeholder="json@gmail.com">
+                    <!--mother's details-->
+                    <h3>Mother</h3><br>
+                    <label for="mname"> Mother's Full Name:- </label>
+                    <input type="text"  id="mname" class="capital" onblur="chngcap()" maxlength="50" placeholder="Full Name" required>
+
+                    <label for="moccupation">Mother's Occupation :- </label>
+                    <input type="text"  id="moccupation" maxlength="20" placeholder="Occupation" required>
+                
+                    <label for="mnic"> Mother's NIC no :- </label> 
+                    <input type="text" id="mnic"  pattern="[0-9]{9}v"  placeholder="123456789v" required >
+                
+                    <label for="mphonenumber">Mother's Phone number :- </label>
+                    <input type="tel"  id="mphonenumber" placeholder="+94-771234568" required pattern="\+94-[0-9]{9}">
+                
+                    <label for="memail">Mother's E-mail :- </label>
+                    <input type="email"  id="memail" class="nocapital"  placeholder="json@gmail.com">
+                    
+                </fieldset>
+                <!--permanent address-->
+                <fieldset>
+                    <legend>Permanent address</legend>
+
+                    <label for="line1 :- ">Line1</label>
+                    <input type="text" id="line1" class="capital" onblur="chngcap()" placeholder="line1" required>
+                    <label for="line2">Line2 :- </label>
+                    <input type="text" placeholder="Line2" class="capital" onblur="chngcap()" id="line2">
+                    
+                    <label for="country">country :- </label>
+                    <input type="text" id="country" value="SRI LANKA" readonly>
+                    <label for="province">Province :- </label>
+                    <input type="text" id="province" class="capital" onblur="chngcap()" placeholder="Province" required>
+                   
+                    <label for="district">District :- </label>
+                    <input type="text" id="district" class="capital" onblur="chngcap()" placeholder="District" required>  
+                    <label for="hometown">Hometown :- </label>
+                    <input type="text" id="hometown" class="capital" onblur="chngcap()" placeholder="Hometown" required>
+                
+                    <label for="code">Postal code :- </label>
+                    <input type="number"id="code" placeholder="32300" required>
+                </fieldset>
+                <!--emergency contact details-->
+                <fieldset>
+                    <legend>Emergency Contact Details</legend>
+                    <label for="ename">Full Name :- </label>
+                    <input type="text" id="ename" class="capital" onblur="chngcap()" placeholder="Full Name" required>
+                    <label for="erelationship">Relationship :- </label>
+                    <input type="text" id="erelationship" class="capital" onblur="chngcap()" required placeholder="ENTER YOUR RELATIONSHIP">
+                    <label for="ephonenumber">phonenumber :- </label>
+                    <input type="tel"  id="ephonenumber" placeholder="+94-771234568" required pattern="\+94-[0-9]{9}">
+                    <label for="eemail">E-mail :- </label>
+                    <input type="email"  id="eemail" class="nocapital" placeholder="json@gmail.com">
+                </fieldset>
+                <!--Scholarship results-->
+                <fieldset id="scholar">
+                    <legend>Scholarship Result</legend>
+                    <label for="scholaryear">Year :- </label>
+                    <select id="scholaryear">
+                        <option value="">select</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <label for="scholarindex">Index :- </label>
+                    <input type="number" id="scholarindex" placeholder="Index no" maxlength="10">
+                    <label for="scholarresult">Result :- </label>
+                    <input type="number" id="scholarresult" min="0" max="200">
+
+                </fieldset>
+                <!--o/l results details-->
+                <fieldset id="ol">
+                    <legend>O/L Results</legend>
+                    <label for="o/lyear">Year :- </label>
+                    <select id="o/lyear">
+                        <option value="">select</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <label for="o/lindex">Index :- </label>
+                    <input type="number" id="o/lindex" placeholder="Index no" maxlength="10">
+                    <label for="">Subjects</label> <br>
+                    <input type="text"placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text" placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                    <input type="text"  placeholder="Enter Subject">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="W">W</option>
+                        <option value="ab">ab</option>
+                    </select>
+                </fieldset>
+
+              <!--declaration-->
+                <input type="checkbox" name="declare" class="none" required>
+                <span>I certify that the information I have written on the application form and the documents I have submitted to be
+                    true and accurate. </span><br>
+                   
+
+              <div class="submit1">
+                <input type="submit" class="submit1" onclick="valid()"  value="Register">
+              </div>
+            
+            </form>
+        </div>
+      <!--Contact us-->
+      <div class="footer">
+
+        <div class="contact" id="contact">
+            <h1>Contact us:</h1>
+            <a href="#" class="fa fa-envelope">&nbsp;&nbsp;&nbsp; spms@gmail.ac.lk</a><br>
+            <a href="#" class="fa fa-phone">&nbsp;&nbsp;&nbsp; 011-2345695</a><br> 
+            <a href="#" class="fa fa-map-marker">&nbsp;&nbsp;&nbsp; 118 B,KPM Road,Colombo - 11.</a>
+        </div>
+
+        <div class="follow">
+        <h1>Follow us :</h1>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        
+        </div>
+        <div class="copy">
+           
+            <p>copy rights &copy; 2022 SPMS College.</p>
+        </div>
+    </div>   
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCType html>
+<html>
+<head><title>About Us</title>
+	 <link rel="stylesheet" href="header.css">
+	 <link rel="stylesheet" type="text/css" href="abt.css">
+	 <link rel="stylesheet" href="bottom.css">
+</HEAD>
+ 
+<body>
+
+
+    
+
+<div class="header">
+            <div class="name">
+                <img src="logo.png" alt="Error" id="logo">
+                <p id="name-college">SPMS College</p>
+                
+                <button class="registration">Registration</button>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html" >Home</a></li>
+                    <li><a href="#" >Events & News</a></li>
+                    <li><a href="#" >Sports</a></li>
+                    <li><a href="#"> Contact us</a></li>
+                    <li><a href="#" >Academic</a></li>
+                    <li><a href="#" >About us</a></li>
+                </ul>
+            </div>
+
+<div class="text-box">
+		<h1>About Us</h1>
+</div>
+<div>
+
+<img src="https://www.unicef.org/srilanka/sites/unicef.org.srilanka/files/styles/media_banner/public/2018-11/Earl%20UNICEF%20-%20EUDSC_53600.jpg?itok=EqXuZnVj">
+</div>
+
+<div class="facilities-col">
+					<h1>History</h1>
+					<p class="para">Since 1995, SPMS College has been an outstanding college for the students overall in every aspect.The founder of SPMS College Mr. Samantha De Silva was one of the best mathematician in Sri Lanka.In 1995,Mr Samantha started our college with 20 students and 2 teachers. Both girls and boys attended the college.He expanded the college from 20 students to 300 students and he was the principal of the college for 7 years. A landmark in the history of college was arrival of Mr.Srimal Rathnaveera to the college in 2002.He took actions to provide spaciuos class rooms and library to the college. Then Mr. Chandana Alwis became the principal of the college. Mainly, he improved sports activties of the college. Since then there was no playground for sports in the college.
+Mr.Chandana expanded the land area of the college in order to have a playground at college premises. The principal at present is Mr. Asanka Fernando. Now there are 3275 students carry out their academic activities in the college.There are 80 teachers at present.
+</p>
+				</div>
+
+<section class="memories">
+			<div class="row">
+				<h1 class="p"> Principal</h1>
+				<div class="memories-col">
+					<img src="Principal.jpg">
+					<div class="layer">
+						<h3> Mr.Asanka Fernando</h3>
+					</div>
+				</div>
+				<h1 class="p">Vice Principal</h1>
+				<div class="memories-col">
+					<img src="Vice principal.jpg">
+					<div class="layer">
+						<h3> Mr.Roshan Perea</h3>
+					</div>
+				</div>
+				<h1 class="p">Head Prefect</h1>
+				<div class="memories-col">
+					<img src="Head prefect.jpg">
+					<div class="layer">
+						<h3> Master Naveen De Alwis</h3>
+					</div>
+				</div>
+</section>
+
+<div>
+<buttn class="button"><span>Map of College</span></button>
+</div>
+<div>
+	<img class="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Skyline_High_School_Campus_Map.png/757px-Skyline_High_School_Campus_Map.png">
+</div>
+ <div class="footer">
+
+            <div class="contact" id="contact">
+                <h1>Contact us:</h1>
+                <a href="#" class="fa fa-envelope">&nbsp;&nbsp;&nbsp; spms@gmail.ac.lk</a><br>
+                <a href="#" class="fa fa-phone">&nbsp;&nbsp;&nbsp; 011-2345695</a><br> 
+                <a href="#" class="fa fa-map-marker">&nbsp;&nbsp;&nbsp; 118 B,KPM Road,Colombo - 11.</a>
+            </div>
+
+            <div class="follow">
+            <h1>Follow us :</h1>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            
+            </div>
+            <div class="copy">
+                <hr>
+                <p>copy rights &copy; 2022 SPMS College.</p>
+            </div>
+        </div>
+        
+<script  type="text/javascript"src="college.js"></script> 
+</body>
+</html>
